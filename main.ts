@@ -37,6 +37,7 @@ namespace KeyBoard{
         //% block='down'
         Down
     }
+    //% block=set KeyBoard state %state%
     export function setKeyBoard(state: KeyBoardState){
 
     }
