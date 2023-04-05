@@ -41,7 +41,7 @@ namespace KeyBoard{
     //% block='set KeyBoard state %state%'
     export function setKeyBoard(state: KeyBoardState){
         let tostate = state.toString()
-        if(tostate == 'Up' && keystate == 'down'){
+        if(tostate == 'up' && keystate == 'down'){
             keystate = 'up'
         }else if(keystate == 'up'){
             keystate = 'down'
