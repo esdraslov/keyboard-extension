@@ -51,4 +51,12 @@ namespace KeyBoard{
     export function value(){
         return 'test'
     }
+    //% block='KeyBoard is up?'
+    export function isUp() {
+        if(keystate == 'down'){
+            return false
+        }else{
+            return true
+        }
+    }
 }
