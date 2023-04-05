@@ -1,4 +1,5 @@
 namespace KeyBoard{
+    let keystate = 'down'
     export enum Key {
         //% block='Q'
         Q,
@@ -39,6 +40,11 @@ namespace KeyBoard{
     }
     //% block=set KeyBoard state %state%
     export function setKeyBoard(state: KeyBoardState){
-
+        let tostate = state
+        if(keystate == 'down'){
+            keystate = 'up'
+        }else if(keystate == 'up'){
+            keystate = 'down'
+        }
     }
 }
