@@ -47,4 +47,8 @@ namespace KeyBoard{
             keystate = 'down'
         }
     }
+    //% block='get value'
+    export function value(){
+        return 'test'
+    }
 }
