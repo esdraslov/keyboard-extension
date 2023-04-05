@@ -1,5 +1,5 @@
+let keystate = 'down'
 namespace KeyBoard{
-    let keystate = 'down'
     export enum Key {
         //% block='Q'
         Q,
@@ -38,10 +38,9 @@ namespace KeyBoard{
         //% block='down'
         Down
     }
-    //% block='set KeyBoard state %state%'
-    export function setKeyBoard(state: KeyBoardState){
-        let tostate = state.toString()
-        if(tostate == 'up' && keystate == 'down'){
+    //% block='switch KeyBoard state'
+    export function setKeyBoard(){
+        if(keystate == 'down'){
             keystate = 'up'
         }else if(keystate == 'up'){
             keystate = 'down'
@@ -51,11 +50,13 @@ namespace KeyBoard{
     export function value(){
         return 'test'
     }
+}
+namespace Logic {
     //% block='KeyBoard is up?'
     export function isUp() {
-        if(keystate == 'down'){
+        if (keystate == 'down') {
             return false
-        }else{
+        } else {
             return true
         }
     }
